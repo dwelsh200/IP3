@@ -74,10 +74,13 @@ public class BoardScript : MonoBehaviour
 	{
 		int x = convertFloatToInt(xF);
 		int z = convertFloatToInt(zF);
-		Destroy(boardObjects[x, z]);
-		board[x, z] = 2;
-		position = new Vector3(x * tileSize, 0.0f, z * tileSize);
-		boardTiles[x, z] = Instantiate(objects[0], position, Quaternion.identity) as GameObject;
-		UI.addScore();
+		if(board[x, z] == 0)
+		{
+			Destroy(boardObjects[x, z]);
+			board[x, z] = 2;
+			position = new Vector3(x * tileSize, 0.0f, z * tileSize);
+			boardTiles[x, z] = Instantiate(objects[0], position, Quaternion.identity) as GameObject;
+			UI.addScore();
+		}
 	}
 }
