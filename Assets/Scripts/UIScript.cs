@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class UIScript : MonoBehaviour {
 
 	public int score;
-	Text text;
+	public int money = 500;
+	private Text text;
 
 	// Use this for initialization
 	void Start () 
@@ -16,11 +17,26 @@ public class UIScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		text.text = "Spawned: " + score;
+		text.text = "Spawned: " + score + "\nMoney: " + money;
 	}
 
 	public void addScore()
 	{
 		score++;
+	}
+
+	public void removeScore()
+	{
+		score--;
+	}
+
+	public void removeMoney(int amount)
+	{
+		money -= amount;
+	}
+
+	public void addMoney(int amount)
+	{
+		money += amount;
 	}
 }

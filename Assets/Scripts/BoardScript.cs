@@ -23,7 +23,15 @@ public class BoardScript : MonoBehaviour
 	//Position of object being instantiated
 	private Vector3 position;
 
+	//Coordinates of the selected tile
+	private int activeX;
+	private int activeZ;
+
 	UIScript UI;
+
+	//Testing the building UI
+	public GameObject buildingUI;
+	public bool isUIActive = false;
 
 	// Use this for initialization
 	void Start () 
@@ -74,13 +82,59 @@ public class BoardScript : MonoBehaviour
 	{
 		int x = convertFloatToInt(xF);
 		int z = convertFloatToInt(zF);
-		if(board[x, z] == 0)
+		if(board[x, z] == 0 && UI.money >= 100)
 		{
 			Destroy(boardObjects[x, z]);
 			board[x, z] = 2;
 			position = new Vector3(x * tileSize, 0.0f, z * tileSize);
-			boardTiles[x, z] = Instantiate(objects[0], position, Quaternion.identity) as GameObject;
+			boardObjects[x, z] = Instantiate(objects[0], position, Quaternion.identity) as GameObject;
 			UI.addScore();
+			UI.removeMoney(100);
 		}
+	}
+
+	public void spawnOnActiveTile()
+	{
+		if(board[activeX, activeZ] == 0 && UI.money >= 100)
+		{
+			Destroy(boardObjects[activeX, activeZ]);
+			board[activeX, activeZ] = 2;
+			position = new Vector3(activeX * tileSize, 0.0f, activeZ * tileSize);
+			boardObjects[activeX, activeZ] = Instantiate(objects[0], position, Quaternion.identity) as GameObject;
+			UI.addScore();
+			UI.removeMoney(100);
+		}
+	}
+
+	public void destroyOnActiveTile()
+	{
+		if(board[activeX, activeZ] != 0)
+		{
+			Destroy(boardObjects[activeX, activeZ]);
+			board[activeX, activeZ] = 0;
+			UI.removeScore();
+			UI.addMoney(50);
+		}
+	}
+
+	public void setActiveTile(float xF, float zF)
+	{
+		int x = convertFloatToInt(xF);
+		int z = convertFloatToInt(zF);
+		activeX = x;
+		activeZ = z;
+	}
+
+	public void buildUIOn()
+	{
+		isUIActive = true;
+		buildingUI.SetActive(true);
+
+	}
+
+	public void buildUIOff()
+	{
+		isUIActive = false;
+		buildingUI.SetActive(false);
 	}
 }
