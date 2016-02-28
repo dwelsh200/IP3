@@ -24,12 +24,14 @@ public class BoardScript : MonoBehaviour
 	private Vector3 position;
 
 	UIScript UI;
+    //Money money;
 
 	// Use this for initialization
 	void Start () 
 	{
-		UI = GameObject.Find("Text").GetComponent<UIScript>(); 
-		gridWidth = setGridWidth;
+		UI = GameObject.Find("Text").GetComponent<UIScript>();
+        //money = GameObject.Find("Money").GetComponent<Money>();
+        gridWidth = setGridWidth;
 		gridHeight = setGridHeight;
 		board = new int[gridWidth, gridHeight];
 		boardTiles = new GameObject[gridWidth, gridHeight];
@@ -79,5 +81,6 @@ public class BoardScript : MonoBehaviour
 		position = new Vector3(x * tileSize, 0.0f, z * tileSize);
 		boardTiles[x, z] = Instantiate(objects[0], position, Quaternion.identity) as GameObject;
 		UI.addScore();
+        //money.Buy();
 	}
 }
