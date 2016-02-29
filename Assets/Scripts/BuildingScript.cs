@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TileScript : MonoBehaviour {
+public class BuildingScript : MonoBehaviour {
 
 	private BoardScript bs;
 

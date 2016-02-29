@@ -6,6 +6,10 @@ public class UIScript : MonoBehaviour {
 
 	public int score;
 	public int money = 500;
+	public int energy;
+	public int pollution;
+
+
 	private Text text;
 
 	// Use this for initialization
@@ -17,7 +21,7 @@ public class UIScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		text.text = "Spawned: " + score + "\nMoney: " + money;
+		text.text = "Money: " + money + "\nSpawned: " + score;
 	}
 
 	public void addScore()

@@ -26,6 +26,8 @@ public class BoardScript : MonoBehaviour
 	//Coordinates of the selected tile
 	private int activeX;
 	private int activeZ;
+	private int oldActiveX;
+	private int oldActiveZ;
 
 	UIScript UI;
 
@@ -68,14 +70,22 @@ public class BoardScript : MonoBehaviour
 	}
 
 	//Deletes old tile and replaces it with a new one
-	public void changeTile(float xF, float zF)
+	public void changeTile(float xF, float zF, int tile)
 	{
 		int x = convertFloatToInt(xF);
 		int z = convertFloatToInt(zF);
 		Destroy(boardTiles[x, z]);
-		board[x, z] = 1;
+		//board[x, z] = 1;
 		position = new Vector3(x * tileSize, 0.0f, z * tileSize);
-		boardTiles[x, z] = Instantiate(tiles[1], position, Quaternion.identity) as GameObject;
+		boardTiles[x, z] = Instantiate(tiles[tile], position, Quaternion.identity) as GameObject;
+	}
+
+	public void changeTile(int x, int z, int tile)
+	{
+		Destroy(boardTiles[x, z]);
+		//board[x, z] = 1;
+		position = new Vector3(x * tileSize, 0.0f, z * tileSize);
+		boardTiles[x, z] = Instantiate(tiles[tile], position, Quaternion.identity) as GameObject;
 	}
 
 	public void spawnOnTile(float xF, float zF)
@@ -93,14 +103,14 @@ public class BoardScript : MonoBehaviour
 		}
 	}
 
-	public void spawnOnActiveTile()
+	public void spawnOnActiveTile(int building)
 	{
 		if(board[activeX, activeZ] == 0 && UI.money >= 100)
 		{
 			Destroy(boardObjects[activeX, activeZ]);
 			board[activeX, activeZ] = 2;
 			position = new Vector3(activeX * tileSize, 0.0f, activeZ * tileSize);
-			boardObjects[activeX, activeZ] = Instantiate(objects[0], position, Quaternion.identity) as GameObject;
+			boardObjects[activeX, activeZ] = Instantiate(objects[building], position, Quaternion.identity) as GameObject;
 			UI.addScore();
 			UI.removeMoney(100);
 		}
@@ -121,8 +131,12 @@ public class BoardScript : MonoBehaviour
 	{
 		int x = convertFloatToInt(xF);
 		int z = convertFloatToInt(zF);
+		oldActiveX = activeX;
+		oldActiveZ = activeZ;
 		activeX = x;
 		activeZ = z;
+		changeTile(xF, zF, 1); //new tile
+		changeTile(oldActiveX, oldActiveZ, 0); //old tile
 	}
 
 	public void buildUIOn()
