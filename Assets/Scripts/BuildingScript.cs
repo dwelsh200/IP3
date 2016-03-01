@@ -30,6 +30,6 @@ public class BuildingScript : MonoBehaviour {
 			//activate canvas
 			bs.setActiveTile(transform.position[0], transform.position[2]);
 			bs.buildUIOn();
-		}
+        }
 	}
 }

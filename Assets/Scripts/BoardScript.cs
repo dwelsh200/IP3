@@ -98,7 +98,7 @@ public class BoardScript : MonoBehaviour
 			board[x, z] = 2;
 			position = new Vector3(x * tileSize, 0.0f, z * tileSize);
 			boardObjects[x, z] = Instantiate(objects[0], position, Quaternion.identity) as GameObject;
-			UI.addScore();
+			UI.addSpawnedScore();
 			UI.removeMoney(100);
 		}
 	}
@@ -111,9 +111,32 @@ public class BoardScript : MonoBehaviour
 			board[activeX, activeZ] = 2;
 			position = new Vector3(activeX * tileSize, 0.0f, activeZ * tileSize);
 			boardObjects[activeX, activeZ] = Instantiate(objects[building], position, Quaternion.identity) as GameObject;
-			UI.addScore();
-			UI.removeMoney(100);
-		}
+            UI.addSpawnedScore();
+            if (objects[building] == objects[0])
+            {
+                UI.removeMoney(25);
+                UI.addPollution(1);
+               
+            }
+            else if(objects[building] == objects[1])
+            {
+                UI.removeMoney(50);
+                UI.addPollution(5);
+
+            }
+            else if (objects[building] == objects[2])
+            {
+                UI.removeMoney(75);
+                UI.addPollution(8);
+
+            }
+            else if (objects[building] == objects[3])
+            {
+                UI.removeMoney(100);
+                UI.addPollution(10);
+
+            }
+        }
 	}
 
 	public void destroyOnActiveTile()
@@ -122,7 +145,7 @@ public class BoardScript : MonoBehaviour
 		{
 			Destroy(boardObjects[activeX, activeZ]);
 			board[activeX, activeZ] = 0;
-			UI.removeScore();
+			UI.removeSpawnedScore();
 			UI.addMoney(50);
 		}
 	}

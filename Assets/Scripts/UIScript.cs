@@ -7,10 +7,14 @@ public class UIScript : MonoBehaviour {
 	public int score;
 	public int money = 500;
 	public int energy;
-	public int pollution;
+	public double pollutionRate;
+    public double currentPollution;
+
+    private float timeRate = 10f;
+    private float nextTime = 0;
 
 
-	private Text text;
+    private Text text;
 
 	// Use this for initialization
 	void Start () 
@@ -21,15 +25,23 @@ public class UIScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		text.text = "Money: " + money + "\nSpawned: " + score;
-	}
+        
+        text.text = "Money: " + money + "\nSpawned: " + score + "\nPollution:" + currentPollution;
 
-	public void addScore()
+        if (Time.time > nextTime)
+        {
+         nextTime = Time.time + timeRate;
+         currentPollution = currentPollution * pollutionRate * 1.09 * ( energy  *0.5);
+        }
+
+    }
+
+    public void addSpawnedScore()
 	{
 		score++;
 	}
 
-	public void removeScore()
+	public void removeSpawnedScore()
 	{
 		score--;
 	}
@@ -43,4 +55,9 @@ public class UIScript : MonoBehaviour {
 	{
 		money += amount;
 	}
+
+    public void addPollution(int amount)
+    {
+        pollutionRate = pollutionRate * 1.01 * (amount*0.5);
+     }
 }
