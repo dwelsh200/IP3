@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class BuildingScript : MonoBehaviour {
 
@@ -19,17 +20,20 @@ public class BuildingScript : MonoBehaviour {
 
 	void OnMouseDown()
 	{		
-		if(bs.isUIActive)
+		if(!EventSystem.current.IsPointerOverGameObject())
 		{
-			//activate tile
-			bs.setActiveTile(transform.position[0], transform.position[2]);
+			if(bs.isUIActive)
+			{
+				//activate tile
+				bs.setActiveTile(transform.position[0], transform.position[2]);
+			}
+			else
+			{
+				//activate tile
+				//activate canvas
+				bs.setActiveTile(transform.position[0], transform.position[2]);
+				bs.buildUIOn();
+			}
 		}
-		else
-		{
-			//activate tile
-			//activate canvas
-			bs.setActiveTile(transform.position[0], transform.position[2]);
-			bs.buildUIOn();
-        }
 	}
 }

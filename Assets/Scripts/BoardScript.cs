@@ -173,5 +173,6 @@ public class BoardScript : MonoBehaviour
 	{
 		isUIActive = false;
 		buildingUI.SetActive(false);
+		changeTile(activeX, activeZ, 0);
 	}
 }
