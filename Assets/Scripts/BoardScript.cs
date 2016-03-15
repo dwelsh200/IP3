@@ -29,7 +29,7 @@ public class BoardScript : MonoBehaviour
 	private int oldActiveX;
 	private int oldActiveZ;
 
-	UIScript UI;
+	public UIScript UI;
 
 	//Testing the building UI
 	public GameObject buildingUI;
@@ -111,31 +111,7 @@ public class BoardScript : MonoBehaviour
 			board[activeX, activeZ] = 2;
 			position = new Vector3(activeX * tileSize, 0.0f, activeZ * tileSize);
 			boardObjects[activeX, activeZ] = Instantiate(objects[building], position, Quaternion.identity) as GameObject;
-            UI.addSpawnedScore();
-            if (objects[building] == objects[0])
-            {
-                UI.removeMoney(25);
-                UI.addPollution(1);
-               
-            }
-            else if(objects[building] == objects[1])
-            {
-                UI.removeMoney(50);
-                UI.addPollution(5);
-
-            }
-            else if (objects[building] == objects[2])
-            {
-                UI.removeMoney(75);
-                UI.addPollution(8);
-
-            }
-            else if (objects[building] == objects[3])
-            {
-                UI.removeMoney(100);
-                UI.addPollution(10);
-
-            }
+            UI.addSpawnedScore();            
         }
 	}
 
