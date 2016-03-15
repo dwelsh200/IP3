@@ -10,6 +10,15 @@ public class BuildingScript : MonoBehaviour {
 	public int pollution;
 	public int happiness;
 	public int energy;
+	public int buildingID;
+
+	//variables for incremental building stats
+	public int pollutionIncrement;
+	public int populationIncrement;
+	public int moneyIncrement;
+
+	public float timeRate = 10f;
+    public float nextTime = 0;
 
 	private BoardScript bs;
 
@@ -28,7 +37,48 @@ public class BuildingScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		if (Time.time > nextTime)
+        {
+         	nextTime = Time.time + timeRate;       
+			switch(buildingID)
+			{
+				case 0:
+					bs.UI.addPopulation(populationIncrement);
+					bs.UI.addPollution(pollutionIncrement);
+					bs.UI.addMoney(moneyIncrement);
+					break;
+				case 1:
+					bs.UI.addPopulation(populationIncrement);
+					bs.UI.addPollution(pollutionIncrement);
+					bs.UI.addMoney(moneyIncrement);
+					break;
+				case 2:
+					bs.UI.addPopulation(populationIncrement);
+					bs.UI.addPollution(pollutionIncrement);
+					bs.UI.addMoney(moneyIncrement);
+					break;
+				case 3:
+					bs.UI.addPopulation(populationIncrement);
+					bs.UI.addPollution(pollutionIncrement);
+					bs.UI.addMoney(moneyIncrement);
+					break;
+				case 4:
+					bs.UI.addPopulation(populationIncrement);
+					bs.UI.addPollution(pollutionIncrement);
+					bs.UI.addMoney(moneyIncrement);
+					break;
+				case 5:
+					bs.UI.addPopulation(populationIncrement);
+					bs.UI.addPollution(pollutionIncrement);
+					bs.UI.addMoney(moneyIncrement);
+					break;
+				case 6:
+					bs.UI.addPopulation(populationIncrement);
+					bs.UI.addPollution(pollutionIncrement);
+					bs.UI.addMoney(moneyIncrement);
+					break;
+			}
+		}
 	}
 
 	void OnMouseDown()

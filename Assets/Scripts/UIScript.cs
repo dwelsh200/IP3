@@ -5,18 +5,12 @@ using UnityEngine.UI;
 public class UIScript : MonoBehaviour {
 
 	public int score;
-	public int money = 500;
-	public int population;
+	public double money = 500f;
+	public double population;
 	public int tourism;
-	public int pollution;
+	public double pollution;
 	public int happiness;
 	public int energy;
-	public double pollutionRate;
-    public double currentPollution;
-
-    private float timeRate = 10f;
-    private float nextTime = 0;
-
 
     private Text text;
 
@@ -28,17 +22,8 @@ public class UIScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () 
-	{
-        
-        //text.text = "Money: " + money + "\nSpawned: " + score + "\nPollution:" + currentPollution;
+	{     
 		text.text = "Spawned: " + score + "\nMoney: " + money + "\nPollution: " + pollution + "\nPopulation: " + population + "\nHappiness: " + happiness + "\nEnergy: " + energy + "\nTourism: " + tourism;
-
-        if (Time.time > nextTime)
-        {
-         nextTime = Time.time + timeRate;
-         //currentPollution = currentPollution * pollutionRate * 1.09 * ( energy  *0.5);
-        }
-
     }
 
     public void addSpawnedScore()
