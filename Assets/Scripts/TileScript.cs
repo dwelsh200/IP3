@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class TileScript : MonoBehaviour {
 
@@ -17,19 +18,23 @@ public class TileScript : MonoBehaviour {
 	
 	}
 
-	void OnMouseDown()
-	{		
-		if(bs.isUIActive)
-		{
-			//activate tile
-			bs.setActiveTile(transform.position[0], transform.position[2]);
-		}
-		else
-		{
-			//activate tile
-			//activate canvas
-			bs.setActiveTile(transform.position[0], transform.position[2]);
-			bs.buildUIOn();
-		}
-	}
+    void OnMouseDown()
+    {
+        if (!EventSystem.current.IsPointerOverGameObject())
+        {
+
+            if (bs.isUIActive)
+            {
+                //activate tile
+                bs.setActiveTile(transform.position[0], transform.position[2]);
+            }
+            else
+            {
+                //activate tile
+                //activate canvas
+                bs.setActiveTile(transform.position[0], transform.position[2]);
+                bs.buildUIOn();
+            }
+        }
+    }
 }

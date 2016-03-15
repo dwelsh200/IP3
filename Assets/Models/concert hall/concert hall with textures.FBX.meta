@@ -1,0 +1,282 @@
+fileFormatVersion: 2
+guid: 3374ed7045575164b8d17d470d0bd55d
+timeCreated: 1457880974
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: arch pillars
+    100002: back roof
+    100004: balcony front
+    100006: balcony front001
+    100008: balcony front002
+    100010: building upper middle section
+    100012: concert hall bum
+    100014: //RootNode
+    100016: 'fancy pants statues '
+    100018: front gate
+    100020: front gate001
+    100022: front gate002
+    100024: gate back section
+    100026: gate back section001
+    100028: gate back section002
+    100030: gate brick bit
+    100032: gate brick bit001
+    100034: gate brick bit002
+    100036: gate brick sections
+    100038: mid building
+    100040: 'pillar '
+    100042: rear of building
+    100044: Roof
+    100046: Roof section 2
+    100048: statues
+    100050: sticky out roof section
+    100052: white brick
+    100054: white brick section
+    100056: white brick section001
+    100058: white brick section002
+    100060: white rock
+    100062: window and gate extrusions
+    100064: window and gate extrusions001
+    100066: window and gate extrusions002
+    100068: window frames
+    100070: window frames001
+    100072: window frames002
+    100074: window planes
+    100076: window planes001
+    100078: window planes002
+    100080: window section of arch
+    100082: window section of arch001
+    100084: window section of arch002
+    400000: arch pillars
+    400002: back roof
+    400004: balcony front
+    400006: balcony front001
+    400008: balcony front002
+    400010: building upper middle section
+    400012: concert hall bum
+    400014: //RootNode
+    400016: 'fancy pants statues '
+    400018: front gate
+    400020: front gate001
+    400022: front gate002
+    400024: gate back section
+    400026: gate back section001
+    400028: gate back section002
+    400030: gate brick bit
+    400032: gate brick bit001
+    400034: gate brick bit002
+    400036: gate brick sections
+    400038: mid building
+    400040: 'pillar '
+    400042: rear of building
+    400044: Roof
+    400046: Roof section 2
+    400048: statues
+    400050: sticky out roof section
+    400052: white brick
+    400054: white brick section
+    400056: white brick section001
+    400058: white brick section002
+    400060: white rock
+    400062: window and gate extrusions
+    400064: window and gate extrusions001
+    400066: window and gate extrusions002
+    400068: window frames
+    400070: window frames001
+    400072: window frames002
+    400074: window planes
+    400076: window planes001
+    400078: window planes002
+    400080: window section of arch
+    400082: window section of arch001
+    400084: window section of arch002
+    2300000: arch pillars
+    2300002: back roof
+    2300004: balcony front
+    2300006: balcony front001
+    2300008: balcony front002
+    2300010: building upper middle section
+    2300012: concert hall bum
+    2300014: 'fancy pants statues '
+    2300016: front gate
+    2300018: front gate001
+    2300020: front gate002
+    2300022: gate back section
+    2300024: gate back section001
+    2300026: gate back section002
+    2300028: gate brick bit
+    2300030: gate brick bit001
+    2300032: gate brick bit002
+    2300034: gate brick sections
+    2300036: mid building
+    2300038: 'pillar '
+    2300040: rear of building
+    2300042: Roof
+    2300044: Roof section 2
+    2300046: statues
+    2300048: sticky out roof section
+    2300050: white brick
+    2300052: white brick section
+    2300054: white brick section001
+    2300056: white brick section002
+    2300058: white rock
+    2300060: window and gate extrusions
+    2300062: window and gate extrusions001
+    2300064: window and gate extrusions002
+    2300066: window frames
+    2300068: window frames001
+    2300070: window frames002
+    2300072: window planes
+    2300074: window planes001
+    2300076: window planes002
+    2300078: window section of arch
+    2300080: window section of arch001
+    2300082: window section of arch002
+    3300000: arch pillars
+    3300002: back roof
+    3300004: balcony front
+    3300006: balcony front001
+    3300008: balcony front002
+    3300010: building upper middle section
+    3300012: concert hall bum
+    3300014: 'fancy pants statues '
+    3300016: front gate
+    3300018: front gate001
+    3300020: front gate002
+    3300022: gate back section
+    3300024: gate back section001
+    3300026: gate back section002
+    3300028: gate brick bit
+    3300030: gate brick bit001
+    3300032: gate brick bit002
+    3300034: gate brick sections
+    3300036: mid building
+    3300038: 'pillar '
+    3300040: rear of building
+    3300042: Roof
+    3300044: Roof section 2
+    3300046: statues
+    3300048: sticky out roof section
+    3300050: white brick
+    3300052: white brick section
+    3300054: white brick section001
+    3300056: white brick section002
+    3300058: white rock
+    3300060: window and gate extrusions
+    3300062: window and gate extrusions001
+    3300064: window and gate extrusions002
+    3300066: window frames
+    3300068: window frames001
+    3300070: window frames002
+    3300072: window planes
+    3300074: window planes001
+    3300076: window planes002
+    3300078: window section of arch
+    3300080: window section of arch001
+    3300082: window section of arch002
+    4300000: Roof
+    4300002: Roof section 2
+    4300004: 'fancy pants statues '
+    4300006: balcony front
+    4300008: front gate
+    4300010: arch pillars
+    4300012: concert hall bum
+    4300014: sticky out roof section
+    4300016: mid building
+    4300018: 'pillar '
+    4300020: window section of arch
+    4300022: building upper middle section
+    4300024: rear of building
+    4300026: window and gate extrusions
+    4300028: white brick
+    4300030: statues
+    4300032: back roof
+    4300034: gate brick sections
+    4300036: window planes
+    4300038: white brick section
+    4300040: window frames
+    4300042: gate brick bit
+    4300044: gate back section
+    4300046: gate brick bit001
+    4300048: front gate001
+    4300050: gate back section001
+    4300052: window planes001
+    4300054: window section of arch001
+    4300056: window frames001
+    4300058: white brick section001
+    4300060: window and gate extrusions001
+    4300062: white brick section002
+    4300064: window section of arch002
+    4300066: gate back section002
+    4300068: window planes002
+    4300070: window and gate extrusions002
+    4300072: window frames002
+    4300074: gate brick bit002
+    4300076: front gate002
+    4300078: white rock
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
